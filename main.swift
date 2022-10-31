@@ -134,3 +134,88 @@ print(informalGreeting)
 if let nickName {
     print("Hello, \(nickName)")
 }
+
+// Switch statement
+
+let vegetable = "blue pepper"
+
+switch vegetable {
+    case "celery":
+        print("Add some raisins and make ants on a log.")
+    case "cucumber", "watercress":
+        print("That would make a good tea sandwich.")
+    case let x where x.hasSuffix("pepper"):
+        print("Is it a spicy \(x)?")
+    default:
+        print("Everything tastes good in soup.")
+}
+
+// For loop
+
+let userScores = [
+    "Boris": [75, 43, 103, 87, 12],
+    "John": [75, 43, 103, 87, 12],
+    "Jane": [75, 43, 103, 87, 12]
+]
+
+var totalScore2 = 0
+
+for (name, scores) in userScores {
+    print("Names: \(name)")
+    print("Scores: \(scores)")
+    for score in scores {
+        if (score > totalScore2) {
+            totalScore2 = score
+        }
+    }
+}
+
+print(totalScore2)
+
+// While loop
+
+var counter = 0
+
+while counter < 10 {
+    print(counter)
+    counter += 1
+}
+
+print(counter)
+
+// Repeat while
+
+var counter2 = 0
+
+repeat {
+    print(counter2)
+    counter2 += 1
+} while counter2 < 0
+
+// index in a loop
+print("---- Loop ----")
+
+var total = 0
+
+for i in 0..<4 {
+    total += i
+}
+
+print("Total: \(total)")
+
+// Functions
+func showMessage(type: String, name: String) -> String {
+    return "\(type): Hello, \(name)"
+}
+
+var res = showMessage(type: "Success", name: "Boris")
+
+print(res)
+
+func showMessage2(_ type: String, nickName name: String) -> String {
+    return "\(type): Hello, \(name)"
+}
+
+res = showMessage2("Error", nickName: "Boris")
+
+print(res)
